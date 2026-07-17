@@ -1630,6 +1630,157 @@
         transform: rotate(45deg) scale(1.04);
       }
     }
+
+
+    /* Iteration patch: softer hover and non-cropped rounded section navigation */
+    .site-header,
+    .header-inner,
+    .header-actions,
+    .section-slider,
+    .section-slider-track {
+      overflow: visible;
+    }
+
+    .site-header {
+      min-height: 78px;
+    }
+
+    .header-inner {
+      min-height: 78px;
+      padding-block: 8px;
+    }
+
+    .section-slider {
+      padding: 8px;
+      border-radius: 999px;
+      background: rgba(214, 209, 198, .72);
+      border: 1px solid rgba(57, 70, 86, .12);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.42), 0 10px 26px rgba(44,58,76,.055);
+    }
+
+    .section-slider-track {
+      gap: 8px;
+      padding: 3px;
+    }
+
+    .section-slider a {
+      min-height: 36px;
+      padding: 9px 14px 10px;
+      border-radius: 999px;
+      line-height: 1.08;
+      font-size: 12.3px;
+      font-weight: 560;
+      background: rgba(241,235,224,.42);
+      transform: translate3d(0, 0, 0);
+    }
+
+    .section-slider a:hover,
+    .section-slider a.is-active {
+      background: linear-gradient(135deg, rgba(80,110,125,.96), rgba(101,123,168,.96));
+      box-shadow: 0 7px 16px rgba(55,76,98,.11);
+    }
+
+    .hero-section-slider {
+      padding: 8px;
+      border-radius: 999px;
+      margin-top: 16px;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .hero-panel:hover,
+      .doctor-card:hover,
+      .consult-widget:hover,
+      .proof-card:hover,
+      .trust-item:hover,
+      .service-card:hover,
+      .soft-panel:hover,
+      .media-card:hover,
+      .stat-card:hover,
+      .step-card:hover,
+      .form-card:hover,
+      .contact-card:hover,
+      .faq-item:hover,
+      .source-card:hover,
+      .legal-card:hover {
+        transform: translate3d(0, -2.5px, 0) scale(1.002);
+        box-shadow: 0 18px 48px rgba(44,58,76,.115);
+        border-color: rgba(255,255,255,.76);
+      }
+
+      .service-card:hover::after {
+        transform: scale(1.05) translate3d(-1px, -1px, 0);
+        opacity: .78;
+      }
+
+      .btn:hover,
+      .phone-chip:hover,
+      .brand:hover,
+      .pill:hover,
+      .symptom:hover,
+      .floating-chip:hover {
+        transform: translate3d(0, -1.5px, 0);
+        box-shadow: 0 14px 34px rgba(44,58,76,.095);
+      }
+
+      .section-slider:hover {
+        transform: translate3d(0, 0, 0);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.44), 0 12px 28px rgba(44,58,76,.065);
+      }
+
+      .section-slider a:hover,
+      .faq-button:hover {
+        transform: translate3d(0, -1px, 0);
+      }
+
+      .doctor-card:hover .media-img,
+      .media-card:hover .media-img,
+      .media-frame:hover .media-img {
+        transform: scale(1.012);
+        filter: saturate(1.02) contrast(1.01);
+      }
+
+      .doctor-card:hover .doctor-info {
+        transform: translate3d(0, -1.5px, 0);
+      }
+
+      .trust-item:hover .trust-icon,
+      .service-card:hover .card-number,
+      .step-card:hover .card-number,
+      .brand:hover .brand-mark {
+        transform: translate3d(0, -1px, 0) rotate(-1deg) scale(1.015);
+      }
+
+      .faq-item:hover .plus {
+        transform: rotate(6deg) scale(1.01);
+      }
+
+      .faq-item.is-open:hover .plus {
+        transform: rotate(45deg) scale(1.01);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .site-header { min-height: 66px; }
+      .header-inner { min-height: 66px; padding-block: 7px; }
+    }
+
+    @media (max-width: 760px) {
+      .section-slider {
+        padding: 7px;
+        border-radius: 999px;
+      }
+      .section-slider-track {
+        gap: 7px;
+        padding: 3px;
+      }
+      .section-slider a {
+        min-height: 34px;
+        border-radius: 999px;
+        padding: 8px 12px 9px;
+        font-size: 11.8px;
+      }
+    }
+
   </style>
 </head>
 

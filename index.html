@@ -319,19 +319,21 @@
     h1, h2, h3, p { margin-top: 0; }
 
     h1 {
-      margin: 22px 0 18px;
-      font-size: clamp(42px, 6vw, 76px);
-      line-height: .94;
-      letter-spacing: -.075em;
-      max-width: 840px;
+      margin: 20px 0 15px;
+      font-size: clamp(34px, 4.8vw, 58px);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+      max-width: 780px;
+      font-weight: 650;
     }
 
     .hero-lead {
-      max-width: 680px;
+      max-width: 640px;
       color: var(--soft-ink);
-      font-size: clamp(18px, 2vw, 22px);
-      line-height: 1.45;
-      margin-bottom: 26px;
+      font-size: clamp(15px, 1.45vw, 17px);
+      line-height: 1.55;
+      margin-bottom: 22px;
+      font-weight: 410;
     }
 
     .hero-actions {
@@ -1099,42 +1101,48 @@
 
 
     .section-slider {
-      max-width: min(42vw, 520px);
-      padding: 5px;
-      border-radius: 999px;
-      background: rgba(229, 224, 213, .58);
-      border: 1px solid rgba(57, 70, 86, .12);
-      box-shadow: 0 12px 36px rgba(44, 58, 76, .08);
-      overflow: hidden;
+      max-width: min(42vw, 540px);
+      padding: 7px;
+      border-radius: 28px;
+      background: rgba(220, 214, 202, .64);
+      border: 1px solid rgba(57, 70, 86, .10);
+      box-shadow: 0 10px 30px rgba(44, 58, 76, .07);
+      overflow: visible;
     }
 
     .section-slider-track {
       display: flex;
-      gap: 6px;
+      align-items: center;
+      gap: 7px;
       overflow-x: auto;
       overscroll-behavior-x: contain;
       scrollbar-width: none;
       scroll-snap-type: x proximity;
+      padding: 1px;
     }
     .section-slider-track::-webkit-scrollbar { display: none; }
 
     .section-slider a {
       flex: 0 0 auto;
       scroll-snap-align: start;
-      padding: 9px 12px;
-      border-radius: 999px;
-      color: #445467;
-      font-size: 13px;
-      font-weight: 850;
-      letter-spacing: -.018em;
-      transition: background .24s ease, color .24s ease, transform .24s var(--ease), box-shadow .24s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 9px 13px;
+      border-radius: 19px;
+      color: #435263;
+      font-size: 12.5px;
+      line-height: 1;
+      font-weight: 620;
+      letter-spacing: -.012em;
+      transition: background .24s ease, color .24s ease, box-shadow .24s ease;
     }
     .section-slider a:hover,
     .section-slider a.is-active {
       color: #f6f1e8;
       background: linear-gradient(135deg, var(--button), var(--button-2));
-      box-shadow: 0 10px 24px rgba(55, 76, 98, .18);
-      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(55, 76, 98, .14);
     }
 
     .hero-section-slider {
@@ -1232,7 +1240,7 @@
       .hero { padding: 28px 0 32px; }
       .hero-panel { padding: 24px; border-radius: 28px; }
       h1 { margin-top: 18px; letter-spacing: -.07em; }
-      .hero-lead { font-size: 17px; }
+      .hero-lead { font-size: 14.5px; }
       .hero-actions { display: grid; grid-template-columns: 1fr; }
       .hero-actions .btn { width: 100%; }
       .mini-proof { grid-template-columns: 1fr; gap: 10px; }
@@ -1323,8 +1331,8 @@
     .hero { padding: 42px 0 42px; }
     .hero-panel { min-height: 520px; padding: 30px; background: rgba(226, 220, 207, .76); }
     .eyebrow { font-size: 12px; font-weight: 650; color: #4e6873; }
-    h1 { font-size: clamp(36px, 5.1vw, 62px); line-height: 1.01; letter-spacing: -.055em; margin: 20px 0 16px; font-weight: 680; }
-    .hero-lead { font-size: clamp(16px, 1.55vw, 19px); line-height: 1.55; font-weight: 430; max-width: 700px; }
+    h1 { font-size: clamp(31px, 4.2vw, 52px); line-height: 1.06; letter-spacing: -.045em; margin: 18px 0 14px; font-weight: 620; max-width: 720px; }
+    .hero-lead { font-size: clamp(14.5px, 1.35vw, 16.5px); line-height: 1.58; font-weight: 405; max-width: 660px; color: #4c5b6b; }
     .hero-note { display: none; }
 
     .mini-proof { gap: 10px; margin-top: 24px; }
@@ -1413,7 +1421,7 @@
       .hero { padding: 24px 0 30px; }
       .hero-panel { padding: 22px; min-height: auto; }
       h1 { font-size: clamp(34px, 10.5vw, 46px); line-height: 1.03; }
-      .hero-lead { font-size: 15.5px; }
+      .hero-lead { font-size: 14.5px; }
       .section { padding: 40px 0; }
       .section-tight { padding: 28px 0; }
       .section-title { font-size: clamp(26px, 8vw, 36px); }
@@ -1430,6 +1438,73 @@
       .form-card { padding: 18px; border-radius: 22px; }
       .service-card { min-height: auto; }
       .doctor-info h2 { font-size: 19px; }
+    }
+
+
+    /* Design refinement: calmer typography, rounded navigation chips, better text alignment */
+    .hero-actions .btn {
+      font-size: 14.5px;
+      min-height: 42px;
+      padding: 11px 16px;
+      font-weight: 620;
+    }
+
+    .proof-card,
+    .service-card,
+    .step-card,
+    .contact-card,
+    .stat-card,
+    .source-card,
+    .soft-panel,
+    .faq-item {
+      text-align: left;
+    }
+
+    .service-card,
+    .step-card,
+    .contact-card,
+    .stat-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+
+    .service-card h3,
+    .step-card h3,
+    .soft-panel h3,
+    .contact-card h3,
+    .source-card strong {
+      text-wrap: balance;
+    }
+
+    .service-card p,
+    .step-card p,
+    .soft-panel p,
+    .contact-card p,
+    .stat-card span {
+      max-width: 100%;
+    }
+
+    .mini-proof .proof-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    .hero-section-slider {
+      border-radius: 30px;
+      margin-top: 14px;
+    }
+
+
+    @media (max-width: 760px) {
+      h1 { font-size: clamp(28px, 9.2vw, 38px); line-height: 1.08; letter-spacing: -.038em; }
+      .hero-lead { font-size: 14.5px; line-height: 1.58; }
+      .hero-actions .btn { font-size: 14px; min-height: 42px; }
+      .section-slider { border-radius: 24px; padding: 6px; }
+      .section-slider a { min-height: 32px; border-radius: 17px; padding: 8px 12px; font-size: 12px; }
     }
 
   </style>
@@ -1712,7 +1787,6 @@
             <span class="section-kicker">Официальные источники</span>
             <h2 class="section-title">Проверяемая информация о клинике и отделении</h2>
           </div>
-          <p class="section-copy">Ссылки открываются в новой вкладке и ведут на официальные страницы ОКДЦ ПАО «Газпром».</p>
         </div>
         <div class="source-grid">
           <a class="source-card reveal" href="https://www.medgaz.ru/clinic/departments/main/directions/specialists/urology/" target="_blank" rel="noopener noreferrer">

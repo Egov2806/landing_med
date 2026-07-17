@@ -1507,6 +1507,129 @@
       .section-slider a { min-height: 32px; border-radius: 17px; padding: 8px 12px; font-size: 12px; }
     }
 
+
+
+    /* Professional micro-interactions: smooth hover movement for all interactive visual objects */
+    .hero-panel,
+    .doctor-card,
+    .consult-widget,
+    .proof-card,
+    .trust-item,
+    .service-card,
+    .soft-panel,
+    .media-card,
+    .stat-card,
+    .step-card,
+    .form-card,
+    .contact-card,
+    .faq-item,
+    .source-card,
+    .legal-card,
+    .pill,
+    .symptom,
+    .floating-chip,
+    .phone-chip,
+    .brand,
+    .section-slider,
+    .section-slider a,
+    .btn,
+    .faq-button,
+    .media-frame,
+    .doctor-info {
+      transition:
+        opacity .9s var(--ease),
+        transform .46s var(--ease),
+        filter .46s var(--ease),
+        box-shadow .46s var(--ease),
+        background .46s var(--ease),
+        border-color .46s var(--ease),
+        color .28s ease;
+      will-change: transform;
+    }
+
+    .media-img,
+    .method-visual,
+    .trust-icon,
+    .card-number,
+    .faq-button .plus,
+    .brand-mark {
+      transition:
+        transform .56s var(--ease),
+        opacity .42s ease,
+        filter .42s ease,
+        box-shadow .42s ease,
+        background .42s ease;
+      will-change: transform;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      .hero-panel:hover,
+      .doctor-card:hover,
+      .consult-widget:hover,
+      .proof-card:hover,
+      .trust-item:hover,
+      .service-card:hover,
+      .soft-panel:hover,
+      .media-card:hover,
+      .stat-card:hover,
+      .step-card:hover,
+      .form-card:hover,
+      .contact-card:hover,
+      .faq-item:hover,
+      .source-card:hover,
+      .legal-card:hover {
+        transform: translate3d(0, -7px, 0) scale(1.01);
+        box-shadow: 0 24px 68px rgba(44, 58, 76, .14);
+        border-color: rgba(255,255,255,.86);
+      }
+
+      .service-card:hover::after {
+        transform: scale(1.14) translate3d(-4px, -4px, 0);
+        opacity: .9;
+      }
+
+      .btn:hover,
+      .phone-chip:hover,
+      .brand:hover,
+      .pill:hover,
+      .symptom:hover,
+      .floating-chip:hover,
+      .section-slider:hover {
+        transform: translate3d(0, -3px, 0);
+        box-shadow: 0 18px 46px rgba(44, 58, 76, .12);
+      }
+
+      .section-slider a:hover,
+      .faq-button:hover {
+        transform: translate3d(0, -2px, 0);
+      }
+
+      .doctor-card:hover .media-img,
+      .media-card:hover .media-img,
+      .media-frame:hover .media-img {
+        transform: scale(1.035);
+        filter: saturate(1.04) contrast(1.02);
+      }
+
+      .doctor-card:hover .doctor-info {
+        transform: translate3d(0, -4px, 0);
+      }
+
+      .trust-item:hover .trust-icon,
+      .service-card:hover .card-number,
+      .step-card:hover .card-number,
+      .brand:hover .brand-mark {
+        transform: translate3d(0, -2px, 0) rotate(-2deg) scale(1.04);
+      }
+
+      .faq-item:hover .plus {
+        transform: rotate(12deg) scale(1.04);
+      }
+
+      .faq-item.is-open:hover .plus {
+        transform: rotate(45deg) scale(1.04);
+      }
+    }
   </style>
 </head>
 

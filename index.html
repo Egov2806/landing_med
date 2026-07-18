@@ -2313,6 +2313,40 @@
     }
 
 
+
+    /* Final text contrast refinement: slightly darker copy across the page */
+    :root {
+      --ink: #1b2633;
+      --soft-ink: #2f3b49;
+      --muted: #4d5a68;
+      --muted-2: #5f6c78;
+      --danger-note: #584735;
+    }
+
+    body,
+    p,
+    li,
+    input,
+    textarea,
+    button { color: var(--ink); }
+
+    .hero-copy p,
+    .card p,
+    .step p,
+    .doctor-info p,
+    .contact-card span,
+    .source-card span,
+    .legal-card,
+    .faq-panel p,
+    .media-caption,
+    .stat-copy,
+    .mini-stat span { color: var(--muted); }
+
+    .section-kicker,
+    .eyebrow,
+    .nav-links a,
+    .section-slider a { color: var(--soft-ink); }
+
   </style>
 </head>
 
@@ -2588,12 +2622,6 @@
 
     <section class="section section-tight" id="sources">
       <div class="container">
-        <div class="section-head reveal">
-          <div>
-            <span class="section-kicker">Официальные источники</span>
-            <h2 class="section-title">Проверяемая информация о клинике и отделении</h2>
-          </div>
-        </div>
         <div class="source-grid">
           <a class="source-card reveal" href="https://www.medgaz.ru/clinic/departments/main/directions/specialists/urology/" target="_blank" rel="noopener noreferrer">
             <strong>Урологическое отделение ОКДЦ ПАО «Газпром»</strong>
